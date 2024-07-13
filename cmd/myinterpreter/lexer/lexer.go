@@ -12,5 +12,9 @@ func Scan(current rune) {
 		fmt.Println("LEFT_PAREN ( null")
 	case token.RIGHT_PAREN:
 		fmt.Println("RIGHT_PAREN ) null")
+	case token.LEFT_BRACE:
+		fmt.Println("LEFT_BRACE { null")
+	case token.RIGHT_BRACE:
+		fmt.Println("RIGHT_BRACE } null")
 	}
 }
