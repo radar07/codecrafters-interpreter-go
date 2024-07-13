@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/codecrafters-io/interpreter-starter-go/cmd/myinterpreter/lexer"
 )
 
 func main() {
@@ -29,8 +31,10 @@ func main() {
 	}
 
 	if len(fileContents) > 0 {
-		panic("Scanner not implemented")
-	} else {
-		fmt.Println("EOF  null") // Placeholder, remove this line when implementing the scanner
+		// panic("Scanner not implemented")
+		for _, current := range string(fileContents) {
+			lexer.Scan(current)
+		}
 	}
+	fmt.Println("EOF  null")
 }
